@@ -3,8 +3,8 @@ from django.utils import timezone
 
 # Create your models here.
 class Todo(models.Model):
-	title = models.CharField(max_length=30)
-	content = models.TextField()
+	taskname = models.CharField('todo title',max_length=30)
+	description = models.TextField()
 	date = models.DateField(default=timezone.now)
 
 	def __str__(self):
